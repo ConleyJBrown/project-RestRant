@@ -19,8 +19,8 @@ Here are the various routes which I intend to create for this app
 
 
 Places data: Places will include the following data:
-    -name    (string)
-    -city    (string)
-    -state   (string)
-    -cusines (string)
-    -pic     (string)
+    1.name    (string)
+    2.city    (string)
+    3.state   (string)
+    4.cusines (string)
+    5.pic     (string)
