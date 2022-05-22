@@ -18,7 +18,7 @@ Here are the various routes which I intend to create for this app
 |GET     | *                       | 404 page (matches any route not defined above)|
 
 
-Places data: Places will include the following data:
+Places will include the following data:
     1.name    (string)
     2.city    (string)
     3.state   (string)
