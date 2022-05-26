@@ -43,6 +43,20 @@ router.get('/', (req, res) => {
     }
   })
 
+  //Get Edit Page
+  router.get('/:id/edit', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+      res.render('places/edit', { place: places[id], id })
+    }
+  })
+  
   //DELETE /places/id
   router.delete('/:id', (req, res) => {
     let id = Number(req.params.id)
@@ -57,6 +71,20 @@ router.get('/', (req, res) => {
       res.redirect('/places')
     }
   })
+
+  router.put('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        res.redirect(`/places/${id}`)
+    }
+  })
+  
   
   
   
