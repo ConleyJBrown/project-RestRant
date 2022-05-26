@@ -7,7 +7,7 @@ function edit_form (data) {
           <main>
             <h1>Edit Place</h1>
             <form method="POST" action={`/places/${data.id}?_method=PUT`}>
-                <div className = "row">
+                <div className="row">
                     <div className="form-group col-sm-6">
                         <label htmlFor="name">Place Name</label>
                         <input 
@@ -22,7 +22,7 @@ function edit_form (data) {
                         <input 
                             className="form-control" 
                             id="pic" 
-                            pic = "pic" 
+                            name = "pic" 
                             value={data.place.pic} 
                         />
                     </div>
@@ -33,7 +33,7 @@ function edit_form (data) {
                         <input 
                             className="form-control" 
                             id="city" 
-                            city="city" 
+                            name="city" 
                             value={data.place.city} 
                         />
                     </div>
@@ -42,17 +42,17 @@ function edit_form (data) {
                         <input 
                             className="form-control" 
                             id="state" 
-                            state = "state"
+                            name = "state"
                             value={data.place.state} 
                         />
                     </div>
                 </div>
                 <div className = "form-group">
-                <label htmlFor="cusines">Place Name</label>
+                <label htmlFor="cuisines">Cuisines</label>
                 <input 
                     className="form-control" 
                     id="cuisines" 
-                    cuisines = "cuisines" 
+                    name = "cuisines" 
                     value={data.place.cuisines} 
                     required />
                 </div>

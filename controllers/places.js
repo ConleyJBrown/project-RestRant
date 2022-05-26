@@ -74,6 +74,7 @@ router.get('/', (req, res) => {
 
   router.put('/:id', (req, res) => {
     let id = Number(req.params.id)
+    console.log(req.body)
     if (isNaN(id)) {
         res.render('error404')
     }
@@ -81,6 +82,7 @@ router.get('/', (req, res) => {
         res.render('error404')
     }
     else {
+        places[id] = req.body
         res.redirect(`/places/${id}`)
     }
   })
